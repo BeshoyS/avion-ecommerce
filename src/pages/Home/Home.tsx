@@ -1,11 +1,23 @@
-import React from 'react'
+import { FC } from "react";
+import Features from "../../components/Features/Features";
+import GetInTouch from "../../components/GetInTouch/GetInTouch";
+import Hero from "../../components/Hero/Hero";
+import Listings from "../../components/Listings/Listings";
+import Newsletters from "../../components/Newsletters/Newsletters";
 
-type Props = {}
+type Props = {};
 
-const Home = (props: Props) => {
+const Home: FC = (props: Props) => {
   return (
-    <div>Home</div>
-  )
-}
+    <>
+      <Hero />
+      <Features/>
+      <Listings/>
+      <Listings/>
+      <Newsletters/>
+      <GetInTouch/>
+    </>
+  );
+};
 
-export default Home
+export default Home;
