@@ -9,7 +9,7 @@ const variables = css`
     --border-gray: #ebe8f4;
     --white: #fff;
     --border-dark: #cac6da;
-    --dark-primary-overlay: rgba(42, 37, 75,0.8);
+    --dark-primary-overlay: rgba(42, 37, 75,0.9);
     /* Fonts */
     --font-family: "Roboto", sans-serif;
     /* Font Sizes */

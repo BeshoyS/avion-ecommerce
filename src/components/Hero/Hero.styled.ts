@@ -9,6 +9,7 @@ export const HeroContainer = styled.main<Props>`
   ${({ theme }) => theme.mixins.flexCenter};
   background: var(--dark-primary);
   color: var(--white);
+  height: 80vh;
   @media screen and (max-width: 768px) {
     background: ${({ hero }) =>
       hero
@@ -23,12 +24,12 @@ export const HeroContainer = styled.main<Props>`
   }
 `;
 export const ContentContainer = styled.section`
-  flex: 2;
+  flex: 5;
   align-self: stretch;
   ${({ theme }) => theme.mixins.flexBetween};
   flex-direction: column;
-  gap: 8rem;
-  padding: calc(var(--padding-small) * 2);
+  gap: 5rem;
+  padding: calc(var(--padding-small) * 3);
   @media screen and (max-width: 768px) {
     text-align: center;
   }
@@ -52,7 +53,7 @@ export const ContentDetails = styled.p`
 `;
 
 export const ImgContainer = styled.section`
-  flex: 1;
+  flex: 4;
   align-self: stretch;
   @media screen and (max-width: 768px) {
     display: none;
