@@ -15,17 +15,25 @@ const Footer: FC = () => {
           <h5 className="mb-4">Join our mailing list</h5>
           <NewsletterSignup
             inpStyle="bg-lightGray/[0.15] text-white placeholder:text-white"
-            btnStyle="bg-white text-darkPrimary"
+            btnStyle="bg-white text-darkPrimary hover:bg-borderDark"
           />
         </section>
       </section>
+      {/* Footer 2 */}
       <section className="border-t border-t-primary mt-12 py-5 md:py-6 md:flex items-center justify-between">
         <p className="text-300 text-center md:text-left md:flex justify-between items-center">
           Copyright 2023 Avion LTD
         </p>
         <section className="hidden md:flex gap-6">
           {socialLinks?.map(({ name, icon, url }) => (
-            <a className="text-700" href={url} title={name}>
+            <a
+              key={name}
+              className="text-700 hover:-translate-y-1 transition-transform duration-200"
+              href={url}
+              title={name}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {icon}
             </a>
           ))}

@@ -13,3 +13,6 @@
     url("./fonts/Satoshi/Satoshi-Regular.otf") format("opentype");
 }
 
+.active {
+  @apply font-bold;
+}

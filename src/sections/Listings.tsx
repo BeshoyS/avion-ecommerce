@@ -12,7 +12,7 @@ const Listings: FC = () => {
         ))}
       </div>
       <div className="text-center mt-12">
-        <Button name="View collection" style="bg-lightGray text-darkPrimary" />
+        <Button name="View collection" style="bg-lightGray text-darkPrimary hover:bg-borderDark" />
       </div>
     </section>
   );

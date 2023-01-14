@@ -35,7 +35,7 @@ const EmailSignup: FC = () => {
         <div>
           <NewsletterSignup
             inpStyle="text-darkPrimary placeholder:text-borderDark"
-            btnStyle="text-white bg-darkPrimary"
+            btnStyle="text-white bg-darkPrimary hover:bg-primary"
           />
         </div>
       </div>

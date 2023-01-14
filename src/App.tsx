@@ -4,6 +4,7 @@ import Home from "./routes/Home";
 import NotFound from "./routes/NotFound";
 import RootLayout from "./routes/RootLayout";
 import Shop from "./routes/Shop";
+import SingleProduct from "./routes/SingleProduct";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
       {
         path: "about",
         element: <About />,
+      },
+      {
+        path: "product/:id",
+        element: <SingleProduct />,
       },
     ],
   },

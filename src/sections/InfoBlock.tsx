@@ -21,7 +21,9 @@ const InfoBlock: FC<Props> = ({
   sectionStyle,
 }) => {
   return (
-    <section className={`text-darkPrimary bg-white md:flex ${sectionStyle??""}`} >
+    <section
+      className={`text-darkPrimary bg-white md:flex ${sectionStyle ?? ""}`}
+    >
       <article className="px-6 py-12 md:w-1/2 flex flex-col justify-between gap-16">
         <div className="md:px-9 md:pt-6">
           <h2 className="font-clashDisplay text-700 mb-3 md:mb-6">{heading}</h2>

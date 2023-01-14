@@ -11,7 +11,12 @@ const FooterLinks: FC<Props> = ({ heading, links }) => {
       <ul className="flex flex-col gap-3">
         {links?.map((link, idx) => (
           <li key={idx} className="text-300">
-            <Link to="/">{link}</Link>
+            <Link
+              className="text-lightGray/[0.45] hover:text-lightGray transition-colors duration-200"
+              to="/"
+            >
+              {link}
+            </Link>
           </li>
         ))}
       </ul>

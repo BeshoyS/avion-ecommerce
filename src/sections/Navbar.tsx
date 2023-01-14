@@ -30,7 +30,7 @@ const Navbar: FC = () => {
 
   return (
     <header className="bg-white text-darkPrimary px-6 py-5 md:px-0 relative shadow-md">
-      <div className="container mx-auto flex items-center justify-between md:justify-start md: gap-10">
+      <div className="container mx-auto flex items-center justify-between md:justify-start md:gap-10">
         <Link className="font-clashDisplay text-700" to="/">
           Avion
         </Link>

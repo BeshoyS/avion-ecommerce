@@ -14,7 +14,7 @@ const infoBlockData = {
     "Handmade, and lovingly crafted furniture and homeware is what we live, breathe and design so our Chelsea boutique become the hotbed for the London interior design community.",
   img: InfoBlockImg,
   btnName: "Get in touch",
-  btnStyle: "bg-lightGray text-darkPrimary w-full md:w-2/5",
+  btnStyle: "bg-lightGray text-darkPrimary w-full md:w-2/5 hover:bg-borderDark",
 };
 
 const Home: FC = () => {

@@ -17,7 +17,7 @@ const Hero: FC = () => {
           </p>
           <Button
             name="View collection"
-            style="bg-lightGray/[0.15] w-full md:w-2/5 md:row-start-2 md:self-start"
+            style="bg-lightGray/[0.15] w-full md:w-2/5 md:row-start-2 md:self-start hover:bg-lightGray/[0.25] "
           />
         </article>
         <div className="md:w-2/5 hidden md:block">
