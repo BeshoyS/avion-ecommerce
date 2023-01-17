@@ -1,7 +1,7 @@
 import { FC } from "react";
-import { Button } from "../types";
+import { Button as ButtonTypes } from "../types";
 
-type Props = Button;
+type Props = ButtonTypes;
 
 const Button: FC<Props> = ({ name, style, onClick, btnType }) => {
   return (
