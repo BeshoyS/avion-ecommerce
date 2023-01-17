@@ -2,12 +2,7 @@ import prod2 from "../assets/products/product_2.png";
 import prod3 from "../assets/products/product_3.png";
 import prod4 from "../assets/products/product_4.png";
 import prod5 from "../assets/products/product_5.png";
-
-export interface listingDataTypes {
-  img: string;
-  title: string;
-  price: number;
-}
+import { listingDataTypes } from "../types";
 
 export const listingData: listingDataTypes[] = [
   { img: prod2, title: "The Dandy chair", price: 250 },

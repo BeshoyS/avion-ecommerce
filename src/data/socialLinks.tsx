@@ -6,12 +6,7 @@ import {
   AiOutlineTwitter,
   AiFillLinkedin,
 } from "react-icons/ai";
-
-export interface socialLinksTypes {
-  name: string;
-  icon: JSX.Element;
-  url: string;
-}
+import { socialLinksTypes } from "../types";
 
 export const socialLinks: socialLinksTypes[] = [
   {

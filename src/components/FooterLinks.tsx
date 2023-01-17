@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { Link } from "react-router-dom";
-import { footerLinkDataTypes } from "../data/footerLinks";
+import { footerLinkDataTypes } from "../types";
 
 type Props = footerLinkDataTypes;
 

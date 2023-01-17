@@ -4,27 +4,31 @@ import Hero from "../sections/Hero";
 import InfoBlock from "../sections/InfoBlock";
 import Listings from "../sections/Listings";
 import EmailSignup from "../sections/EmailSignup";
-import InfoBlockImg from "../assets/sections/features.png";
 
-const infoBlockData = {
-  heading: "The furniture brand for the future, with timeless designs",
-  desc1:
-    "When we started Avion, the idea was simple. Make high quality furniture affordable and available for the mass market.",
-  desc2:
-    "Handmade, and lovingly crafted furniture and homeware is what we live, breathe and design so our Chelsea boutique become the hotbed for the London interior design community.",
-  img: InfoBlockImg,
-  btnName: "Get in touch",
-  btnStyle: "bg-lightGray text-darkPrimary w-full md:w-2/5 hover:bg-borderDark",
-};
+import {
+  useGetCategoriesQuery,
+  useGetGalleryQuery,
+  useGetProductsQuery,
+} from "../redux/ApiSlice";
+import { infoBlockData } from "../data/infoBlockData";
 
 const Home: FC = () => {
+  const { data: categories, isLoading: isCategoriesLoading } =
+    useGetCategoriesQuery();
+  const { data: gallery, isLoading: isGalleryLoading } = useGetGalleryQuery();
+  const { data: Products, isLoading: isProductsLoading } =
+    useGetProductsQuery();
+  !isCategoriesLoading && console.log(categories);
+  !isGalleryLoading && console.log(gallery);
+  !isProductsLoading && console.log(Products);
+
   return (
     <div className="bg-lightGray text-darkPrimary">
       <Hero />
       <Features />
       <Listings />
       <EmailSignup />
-      <InfoBlock {...infoBlockData} />
+      <InfoBlock {...infoBlockData[0]} />
     </div>
   );
 };

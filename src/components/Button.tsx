@@ -1,11 +1,7 @@
 import { FC } from "react";
+import { Button } from "../types";
 
-type Props = {
-  name: string;
-  style?: string;
-  onClick?: () => void;
-  btnType?: "submit" | "reset";
-};
+type Props = Button;
 
 const Button: FC<Props> = ({ name, style, onClick, btnType }) => {
   return (

@@ -1,5 +1,6 @@
 import { FC } from "react";
-import { featuresDataTypes } from "../data/featuresData";
+import { featuresDataTypes } from "../types";
+
 type Props = featuresDataTypes;
 
 const FeatureCard: FC<Props> = ({ icon, title, desc }) => {

@@ -1,7 +1,4 @@
-export interface footerLinkDataTypes {
-  heading: string;
-  links: string[];
-}
+import { footerLinkDataTypes } from "../types";
 
 export const footerLinksData: footerLinkDataTypes[] = [
   {

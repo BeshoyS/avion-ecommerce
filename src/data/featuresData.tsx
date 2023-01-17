@@ -2,11 +2,8 @@ import { TbTruckDelivery } from "react-icons/tb";
 import { IoCheckmarkCircleOutline } from "react-icons/io5";
 import { HiOutlineCreditCard } from "react-icons/hi2";
 import { TbPlant2 } from "react-icons/tb";
-export interface featuresDataTypes {
-  icon: JSX.Element;
-  title: string;
-  desc: string;
-}
+import { featuresDataTypes } from "../types";
+
 export const featuresData: featuresDataTypes[] = [
   {
     icon: <TbTruckDelivery strokeWidth="1.75" />,

@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { useNavigate } from "react-router-dom";
-import { listingDataTypes } from "../data/listingData";
+import { listingDataTypes } from "../types";
 
 type Props = listingDataTypes;
 

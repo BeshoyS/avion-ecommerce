@@ -1,15 +1,8 @@
 import { FC } from "react";
 import Button from "../components/Button";
+import { InfoBlockTypes } from "../types";
 
-type Props = {
-  heading: string;
-  desc1: string;
-  desc2?: string;
-  btnName: string;
-  btnStyle: string;
-  img: string;
-  sectionStyle?: string;
-};
+type Props = InfoBlockTypes;
 
 const InfoBlock: FC<Props> = ({
   heading,
