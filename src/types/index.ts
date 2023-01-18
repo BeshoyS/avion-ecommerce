@@ -34,6 +34,7 @@ export interface footerLinkDataTypes {
 }
 
 export interface listingDataTypes {
+  id: string;
   img: string;
   title: string;
   price: number;

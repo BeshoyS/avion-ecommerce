@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { setupListeners } from "@reduxjs/toolkit/dist/query";
-import { firebaseApi } from "./ApiSlice";
+import { firebaseApi } from "../firebase/firebaseApi";
 const store = configureStore({
   reducer: { [firebaseApi.reducerPath]: firebaseApi.reducer },
   middleware: (getDefaultMiddleware) =>

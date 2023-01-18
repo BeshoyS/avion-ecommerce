@@ -29,15 +29,15 @@ const Navbar: FC = () => {
   });
 
   return (
-    <header className="bg-white text-darkPrimary px-6 py-5 md:px-0 relative shadow-md">
-      <div className="container mx-auto flex items-center justify-between md:justify-start md:gap-10">
-        <Link className="font-clashDisplay text-700" to="/">
+    <header className="bg-white text-darkPrimary px-7 py-5 relative shadow-md">
+      <div className="mx-auto flex items-center justify-between md:justify-start md:gap-10">
+        <Link className="font-clashDisplay text-700 text-left" to="/">
           Avion
         </Link>
 
         {isMobile ? <NavMobile isOpen={isOpen} /> : <NavDesktop />}
 
-        <div className="flex items-center gap-5 text-500 md:ml-auto">
+        <div className="flex items-center gap-3 text-500 md:ml-auto">
           <TbSearch className="cursor-pointer hover:text-primary transition-colors duration-300" />
           <IoCartOutline className="cursor-pointer hover:text-primary transition-colors duration-300" />
           <HiOutlineUserCircle className="cursor-pointer hover:text-primary transition-colors duration-300" />

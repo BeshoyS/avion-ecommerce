@@ -1,11 +1,13 @@
 import { FC } from "react";
 import { NavLink } from "react-router-dom";
+import { useGetCategoriesQuery } from "../../redux/ApiSlice";
 
 type Props = {
   isOpen: boolean;
 };
 
 const NavMobile: FC<Props> = ({ isOpen }) => {
+  const { data: categories } = useGetCategoriesQuery();
   return (
     <nav
       className={`absolute top-full left-0 bg-white w-full z-10 shadow-md  ${
@@ -26,6 +28,16 @@ const NavMobile: FC<Props> = ({ isOpen }) => {
         >
           Shop
         </NavLink>
+        {categories?.map(({ id, category }) => (
+          <NavLink
+            key={id}
+            to={`${category.toLowerCase()}`}
+            state={{ categoryId: id }}
+            className={({ isActive }) => (isActive ? "font-bold" : "")}
+          >
+            {category}
+          </NavLink>
+        ))}
         <NavLink
           to="about"
           className={({ isActive }) => (isActive ? "font-bold" : "")}

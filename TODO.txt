@@ -36,5 +36,11 @@ import { AiOutlineInstagram, AiFillFacebook,AiFillSkype, AiOutlineTwitter, AiFil
 <AiFillLinkedin/>
 
 
+  const { data: categories, isLoading: isCategoriesLoading } = useGetCategoriesQuery();
 
+  const { data: gallery, isLoading: isGalleryLoading } = useGetGalleryQuery();
+
+  const { data: products, isLoading: isProductsLoading } = useGetProductsQuery();
+  
+  const { data: singleProduct, isLoading: isSingleProductLoading } = useGetsingleProductQuery("Wvjw5E25OiiwbJIzvqr3");
 

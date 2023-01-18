@@ -4,18 +4,18 @@ import { listingDataTypes } from "../types";
 
 type Props = listingDataTypes;
 
-const ProductCard: FC<Props> = ({ img, title, price }) => {
+const ProductCard: FC<Props> = ({ id, img, title, price }) => {
   const navigate = useNavigate();
 
   function handleClick() {
-    navigate(`/product/${title}`);
+    navigate(`/product/${id}`);
   }
 
   return (
     <section onClick={handleClick}>
       <div className="h-3/4 cursor-pointer">
         <img
-          className="aspect-[1/1.2] object-cover hover:scale-105 transition-all duration-300"
+          className="aspect-[1/1.3] object-cover hover:scale-105 transition-all duration-300 shadow"
           src={img}
           alt=""
         />
