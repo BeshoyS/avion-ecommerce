@@ -90,6 +90,28 @@ const firebaseEndPoints = firebaseApi.injectEndpoints({
       },
       providesTags: ["products"],
     }),
+    getProductsByCategory: build.query<Product[], string>({
+      async queryFn(arg): Promise<any> {
+        try {
+          const queryIndicator = query(
+            collection(db, "products"),
+            where("categoryId", "==", arg)
+          );
+          const querySnapshot = await getDocs(queryIndicator);
+          const ProductsData = querySnapshot.docs.map(
+            (doc) =>
+              ({
+                id: doc.id,
+                ...doc.data(),
+              } as Product)
+          );
+          return { data: ProductsData };
+        } catch (error) {
+          console.log(error);
+        }
+      },
+      providesTags: ["products"],
+    }),
     getsingleProduct: build.query<Product, string>({
       async queryFn(arg): Promise<any> {
         try {
@@ -112,6 +134,7 @@ export const {
   useGetCategoriesQuery,
   useGetGalleryQuery,
   useGetProductsQuery,
-  useGetsingleProductQuery,
+  useGetProductsByCategoryQuery,
   useGetFeaturedProductsQuery,
+  useGetsingleProductQuery,
 } = firebaseEndPoints;

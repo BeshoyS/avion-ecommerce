@@ -1,11 +1,15 @@
-import React from "react";
-import { useLocation, useNavigation } from "react-router-dom";
+import { skipToken } from "@reduxjs/toolkit/dist/query";
+import { FC } from "react";
+import { useLocation } from "react-router-dom";
+import { useGetProductsByCategoryQuery } from "../redux/ApiSlice";
 
-type Props = {};
-
-const CategoryPage = (props: Props) => {
+const CategoryPage: FC = () => {
   const { state } = useLocation();
-  console.log(state);
+  const categoryId: string = state.categoryId;
+  const { data, isLoading } = useGetProductsByCategoryQuery(
+    categoryId ? categoryId : skipToken
+  );
+  // !isLoading && console.log(data);
   return <div>CategoryPage</div>;
 };
 

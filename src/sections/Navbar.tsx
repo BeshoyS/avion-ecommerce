@@ -7,26 +7,11 @@ import { AiOutlineClose } from "react-icons/ai";
 import { GrMenu } from "react-icons/gr";
 import NavMobile from "../components/Nav/NavMobile";
 import NavDesktop from "../components/Nav/NavDesktop";
+import useIsMobile from "../hooks/useIsMobile";
 
 const Navbar: FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [isMobile, setIsMobile] = useState<boolean>(true);
-
-  // Checks if screen size is mobile on load.
-  useEffect(() => {
-    window.innerWidth <= 768 ? setIsMobile(true) : setIsMobile(false);
-  }, []);
-
-  // Checks for mobile size.
-  useEffect(() => {
-    window.addEventListener("resize", () => {
-      if (window.innerWidth <= 768) setIsMobile(true);
-      else setIsMobile(false);
-    });
-    return () => {
-      window.removeEventListener("resize", () => {});
-    };
-  });
+  const isMobile = useIsMobile(840);
 
   return (
     <header className="bg-white text-darkPrimary px-7 py-5 relative shadow-md">
