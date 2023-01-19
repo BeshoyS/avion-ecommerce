@@ -4,7 +4,7 @@ import Navbar from "../sections/Navbar";
 
 const RootLayout = () => {
   return (
-    <div className="font-satoshi">
+    <div className="font-satoshi bg-borderGray/[0.7]">
       <Navbar />
       <Outlet />
       <Footer />
