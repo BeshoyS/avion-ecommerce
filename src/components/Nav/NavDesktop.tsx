@@ -20,11 +20,11 @@ const NavDesktop: FC = () => {
         >
           Shop
         </NavLink>
-        {categories?.map(({ id, category }) => (
+        {categories?.map(({ id, category, img }) => (
           <NavLink
             key={id}
             to={`categories/${category.toLowerCase()}`}
-            state={{ categoryId: id }}
+            state={{ categoryId: id, categoryImg: img }}
             className={`mx-3 hover:border-b-2 pb-7 border-darkPrimary`}
           >
             {category}

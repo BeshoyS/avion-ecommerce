@@ -2,6 +2,7 @@
 export interface Category {
   id: string;
   category: string;
+  img: string;
 }
 
 export interface Gallery {
@@ -59,9 +60,16 @@ export interface InfoBlockTypes {
 }
 
 //Button Component
-export interface Button {
+export interface ButtonTypes {
   name: string;
   style?: string;
   onClick?: () => void;
   btnType?: "submit" | "reset";
+}
+
+//Heading Component
+export interface HeadingTypes {
+  title: string;
+  bgImg: string;
+  customStyle?: string;
 }

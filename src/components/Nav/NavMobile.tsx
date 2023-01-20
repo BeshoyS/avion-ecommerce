@@ -28,11 +28,11 @@ const NavMobile: FC<Props> = ({ isOpen }) => {
         >
           Shop
         </NavLink>
-        {categories?.map(({ id, category }) => (
+        {categories?.map(({ id, category, img }) => (
           <NavLink
             key={id}
-            to={`${category.toLowerCase()}`}
-            state={{ categoryId: id }}
+            to={`categories/${category.toLowerCase()}`}
+            state={{ categoryId: id, categoryImg: img }}
             className={({ isActive }) => (isActive ? "font-bold" : "")}
           >
             {category}

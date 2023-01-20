@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Button as ButtonTypes } from "../types";
+import { ButtonTypes } from "../types";
 
 type Props = ButtonTypes;
 

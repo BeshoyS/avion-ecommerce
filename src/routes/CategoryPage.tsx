@@ -1,7 +1,7 @@
 import { skipToken } from "@reduxjs/toolkit/dist/query";
 import { FC } from "react";
 import { useLocation, useParams } from "react-router-dom";
-import ProductCard from "../components/ProductCard";
+import Heading from "../components/Heading";
 import ProductsGrid from "../components/ProductsGrid";
 import { useGetProductsByCategoryQuery } from "../redux/ApiSlice";
 
@@ -13,10 +13,12 @@ const CategoryPage: FC = () => {
     categoryId ? categoryId : skipToken
   );
   return (
-    <main className="my-8">
-      <h1 className="capitalize text-center text-900 font-clashDisplay">
-        {category}
-      </h1>
+    <main className="mb-8">
+      <Heading
+        title={`${category}`}
+        bgImg={state.categoryImg}
+        customStyle="mb-8"
+      />
       <ProductsGrid data={data} />
     </main>
   );
