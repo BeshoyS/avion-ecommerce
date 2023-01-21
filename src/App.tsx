@@ -4,6 +4,7 @@ import store from "./redux";
 import About from "./routes/About";
 import Categories from "./routes/Categories";
 import CategoryPage from "./routes/CategoryPage";
+import Contact from "./routes/Contact";
 import Home from "./routes/Home";
 import NotFound from "./routes/NotFound";
 import RootLayout from "./routes/RootLayout";
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
       {
         path: "about",
         element: <About />,
+      },
+      {
+        path: "contact",
+        element: <Contact />,
       },
       {
         path: "product/:id",

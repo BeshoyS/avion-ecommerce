@@ -1,4 +1,5 @@
 import { FC } from "react";
+import { useNavigate } from "react-router-dom";
 import Button from "../components/Button";
 import { InfoBlockTypes } from "../types";
 
@@ -12,7 +13,12 @@ const InfoBlock: FC<Props> = ({
   btnStyle,
   img,
   sectionStyle,
+  naviagteTo,
 }) => {
+  const navigate = useNavigate();
+  function handleNavigate() {
+    navigate(`/${naviagteTo}`, { relative: "path" });
+  }
   return (
     <section
       className={`text-darkPrimary bg-white md:flex ${sectionStyle ?? ""}`}
@@ -23,7 +29,7 @@ const InfoBlock: FC<Props> = ({
           <p className="text-primary mb-6 leading-150 text-400">{desc1}</p>
           <p className="text-primary leading-150 text-400">{desc2}</p>
         </div>
-        <Button name={btnName} style={btnStyle} />
+        <Button onClick={handleNavigate} name={btnName} style={btnStyle} />
       </article>
       <div className="md:w-1/2">
         <img className="h-full object-cover aspect-square" src={img} alt="" />

@@ -10,6 +10,7 @@ const variant_1 = {
     "Handmade, and lovingly crafted furniture and homeware is what we live, breathe and design so our Chelsea boutique become the hotbed for the London interior design community.",
   img: variant1Img,
   btnName: "Get in touch",
+  naviagteTo: "contact",
   btnStyle: "bg-lightGray text-darkPrimary w-full md:w-2/5 hover:bg-borderDark",
 };
 const variant_2 = {
@@ -20,6 +21,7 @@ const variant_2 = {
     "Handmade, and lovingly crafted furniture and homeware is what we live, breathe and design so our Chelsea boutique become the hotbed for the London interior design community.",
   img: variant1Img,
   btnName: "Get in touch",
+  naviagteTo: "contact",
   btnStyle: "bg-lightGray text-darkPrimary w-full md:w-2/5 hover:bg-borderDark",
 };
 const variant_3 = {
@@ -31,6 +33,7 @@ const variant_3 = {
     "Handmade, and lovingly crafted furniture and homeware is what we live, breathe and design so our Chelsea boutique become the hotbed for the London interior design community.",
   img: variant3Img,
   btnName: "Get in touch",
+  naviagteTo: "contact",
   btnStyle: "bg-lightGray text-darkPrimary w-full md:w-2/5 hover:bg-borderDark",
   sectionStyle: "flex flex-col-reverse md:flex-row-reverse",
 };

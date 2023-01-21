@@ -57,6 +57,7 @@ export interface InfoBlockTypes {
   btnStyle: string;
   img: string;
   sectionStyle?: string;
+  naviagteTo: string;
 }
 
 //Button Component
