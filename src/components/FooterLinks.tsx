@@ -9,13 +9,13 @@ const FooterLinks: FC<Props> = ({ heading, links }) => {
     <section>
       <h5 className="font-clashDisplay text-400 mb-3">{heading}</h5>
       <ul className="flex flex-col gap-3">
-        {links?.map((link, idx) => (
+        {links?.map(({ title, href }, idx) => (
           <li key={idx} className="text-300">
             <Link
               className="text-lightGray/[0.45] hover:text-lightGray transition-colors duration-200"
-              to="/"
+              to={href}
             >
-              {link}
+              {title}
             </Link>
           </li>
         ))}

@@ -14,7 +14,7 @@ const CategoryCard: FC<Props> = ({ id, category, img }) => {
   return (
     <div
       onClick={hangleNavigate}
-      className="relative rounded overflow-hidden cursor-pointer"
+      className="relative rounded overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-300"
     >
       <img
         className="w-full aspect-square object-cover "

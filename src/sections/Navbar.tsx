@@ -11,7 +11,7 @@ import useIsMobile from "../hooks/useIsMobile";
 
 const Navbar: FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const isMobile = useIsMobile(840);
+  const isMobile = useIsMobile(930);
 
   return (
     <header className="bg-white text-darkPrimary px-7 py-5 relative shadow-md">

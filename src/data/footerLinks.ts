@@ -4,26 +4,72 @@ export const footerLinksData: footerLinkDataTypes[] = [
   {
     heading: "Menu",
     links: [
-      "New arrivals",
-      "Best sellers",
-      "Recently viewed",
-      "Popular this week",
-      "All products",
+      {
+        title: "New arrivals",
+        href: "/",
+      },
+      {
+        title: "Best sellers",
+        href: "/",
+      },
+      {
+        title: "Recently viewed",
+        href: "/",
+      },
+      {
+        title: "Popular this week",
+        href: "/",
+      },
+      {
+        title: "All products",
+        href: "/shop",
+      },
     ],
   },
   {
     heading: "Categories",
     links: [
-      "Crockery",
-      "Furniture",
-      "Homeware",
-      "Plant pots",
-      "Chairs",
-      "Crockery",
+      {
+        title: "Tables",
+        href: "/",
+      },
+      {
+        title: "Chairs",
+        href: "/",
+      },
+      {
+        title: "Clocks",
+        href: "/",
+      },
+      {
+        title: "Lamps",
+        href: "/",
+      },
     ],
   },
   {
     heading: "Our company",
-    links: ["About us", "Vacancies", "Contact us", "Privacy", "Returns policy"],
+    links: [
+      {
+        title: "About us",
+        href: "/about",
+      },
+      {
+        title: "Vacancies",
+        href: "/",
+      },
+      {
+        title: "Contact us",
+        href: "/contact",
+      },
+      {
+        title: "Privacy",
+        href: "/",
+      },
+      {
+        title: "Returns policy",
+        href: "/",
+      },
+    ],
   },
 ];

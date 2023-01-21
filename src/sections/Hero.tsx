@@ -6,7 +6,7 @@ import Button from "../components/Button";
 const Hero: FC = () => {
   const navigate = useNavigate();
   function handleNavigate() {
-    navigate("/shop", { relative: "path" });
+    navigate("/categories", { relative: "path" });
   }
   return (
     <main className=" md:px-20 md:py-[3.75rem]">
@@ -22,8 +22,8 @@ const Hero: FC = () => {
           </p>
           <Button
             onClick={handleNavigate}
-            name="View collection"
-            style="bg-lightGray/[0.15] w-full md:w-2/5 md:row-start-2 md:self-start hover:bg-lightGray/[0.25] "
+            name="View categories"
+            style="bg-lightGray/[0.15] w-full md:w-2/5 md:row-start-2 md:self-start hover:bg-lightGray/[0.25]"
           />
         </article>
         <div className="md:w-2/5 hidden md:block">

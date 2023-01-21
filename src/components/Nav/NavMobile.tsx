@@ -44,6 +44,12 @@ const NavMobile: FC<Props> = ({ isOpen }) => {
         >
           About
         </NavLink>
+        <NavLink
+          to="contact"
+          className={({ isActive }) => (isActive ? "font-bold" : "")}
+        >
+          Contact
+        </NavLink>
       </div>
     </nav>
   );

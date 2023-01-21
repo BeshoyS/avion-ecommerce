@@ -36,6 +36,12 @@ const NavDesktop: FC = () => {
         >
           About
         </NavLink>
+        <NavLink
+          to="contact"
+          className={`mx-3 hover:border-b-2 pb-7 border-darkPrimary`}
+        >
+          Contact
+        </NavLink>
       </div>
     </nav>
   );

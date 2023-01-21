@@ -29,9 +29,14 @@ export interface featuresDataTypes {
   desc: string;
 }
 
+interface footerLink {
+  title: string;
+  href: string;
+}
+
 export interface footerLinkDataTypes {
   heading: string;
-  links: string[];
+  links: footerLink[];
 }
 
 export interface listingDataTypes {
