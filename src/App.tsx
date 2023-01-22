@@ -9,6 +9,7 @@ import Home from "./routes/Home";
 import NotFound from "./routes/NotFound";
 import RootLayout from "./routes/RootLayout";
 import Shop from "./routes/Shop";
+import ShoppingCart from "./routes/ShoppingCart";
 import SingleProduct from "./routes/SingleProduct";
 
 const router = createBrowserRouter([
@@ -39,16 +40,20 @@ const router = createBrowserRouter([
         ],
       },
       {
+        path: "product/:id",
+        element: <SingleProduct />,
+      },
+      {
+        path: "cart",
+        element: <ShoppingCart />,
+      },
+      {
         path: "about",
         element: <About />,
       },
       {
         path: "contact",
         element: <Contact />,
-      },
-      {
-        path: "product/:id",
-        element: <SingleProduct />,
       },
     ],
   },

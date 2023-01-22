@@ -1,13 +1,20 @@
-import { FC } from "react";
-import { NavLink } from "react-router-dom";
+import { Dispatch, FC, SetStateAction, useEffect } from "react";
+import { NavLink, useLocation } from "react-router-dom";
 import { useGetCategoriesQuery } from "../../redux/ApiSlice";
 
 type Props = {
   isOpen: boolean;
+  setIsOpen: Dispatch<SetStateAction<boolean>>;
 };
 
-const NavMobile: FC<Props> = ({ isOpen }) => {
+const NavMobile: FC<Props> = ({ isOpen, setIsOpen }) => {
   const { data: categories } = useGetCategoriesQuery();
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    // Close the navigation panel
+    setIsOpen(false);
+  }, [pathname]);
   return (
     <nav
       className={`absolute top-full left-0 bg-white w-full z-10 shadow-md  ${

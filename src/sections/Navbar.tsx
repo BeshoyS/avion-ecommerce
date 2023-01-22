@@ -1,5 +1,5 @@
 import { FC, useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { TbSearch } from "react-icons/tb";
 import { HiOutlineUserCircle } from "react-icons/hi2";
 import { IoCartOutline } from "react-icons/io5";
@@ -12,6 +12,11 @@ import useIsMobile from "../hooks/useIsMobile";
 const Navbar: FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const isMobile = useIsMobile(930);
+  const navigate = useNavigate();
+
+  function handleNavigate(to: string) {
+    navigate(`/${to}`, { relative: "path" });
+  }
 
   return (
     <header className="bg-white text-darkPrimary px-7 py-5 relative shadow-md">
@@ -20,11 +25,18 @@ const Navbar: FC = () => {
           Avion
         </Link>
 
-        {isMobile ? <NavMobile isOpen={isOpen} /> : <NavDesktop />}
+        {isMobile ? (
+          <NavMobile isOpen={isOpen} setIsOpen={setIsOpen} />
+        ) : (
+          <NavDesktop />
+        )}
 
         <div className="flex items-center gap-3 text-500 md:ml-auto">
           <TbSearch className="cursor-pointer hover:text-primary transition-colors duration-300" />
-          <IoCartOutline className="cursor-pointer hover:text-primary transition-colors duration-300" />
+          <IoCartOutline
+            className="cursor-pointer hover:text-primary transition-colors duration-300"
+            onClick={() => handleNavigate("cart")}
+          />
           <HiOutlineUserCircle className="cursor-pointer hover:text-primary transition-colors duration-300" />
           {isMobile ? (
             isOpen ? (

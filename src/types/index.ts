@@ -71,6 +71,8 @@ export interface ButtonTypes {
   style?: string;
   onClick?: () => void;
   btnType?: "submit" | "reset";
+  startIcon?: JSX.Element;
+  endIcon?: JSX.Element;
 }
 
 //Heading Component
