@@ -2,6 +2,7 @@ import { skipToken } from "@reduxjs/toolkit/dist/query";
 import { FC } from "react";
 import { useLocation, useParams } from "react-router-dom";
 import Heading from "../components/Heading";
+import Loading from "../components/Loading";
 import ProductsGrid from "../components/ProductsGrid";
 import { useGetProductsByCategoryQuery } from "../redux/ApiSlice";
 import { Category } from "../types";
@@ -19,7 +20,7 @@ const CategoryPage: FC = () => {
   return (
     <main className="mb-8">
       <Heading title={`${category}`} bgImg={categoryImg} customStyle="mb-8" />
-      <ProductsGrid data={data} />
+     <ProductsGrid data={data} isLoading={isLoading} />
     </main>
   );
 };

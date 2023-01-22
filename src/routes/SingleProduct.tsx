@@ -2,6 +2,7 @@ import { skipToken } from "@reduxjs/toolkit/dist/query";
 import { FC } from "react";
 import { useParams } from "react-router-dom";
 import Button from "../components/Button";
+import Loading from "../components/Loading";
 import QuantityBtn from "../components/QuantityBtn";
 import { infoBlockData } from "../data/infoBlockData";
 import { useGetsingleProductQuery } from "../redux/ApiSlice";
@@ -14,6 +15,8 @@ type Props = {};
 const SingleProduct: FC = (props: Props) => {
   const { id } = useParams();
   const { data, isLoading } = useGetsingleProductQuery(id ? id : skipToken);
+
+  isLoading && <Loading />;
   return (
     <>
       <main className="md:w-11/12 mx-auto py-12 md:flex gap-12">
