@@ -15,8 +15,8 @@ const QuantityBtn: FC<Props> = ({ sku }) => {
     setAmount((prev) => (prev > 1 ? prev - 1 : prev));
   }
   return (
-    <div className="md:flex items-center gap-6">
-      <div className="flex justify-between items-center gap-3 bg-white p-4 md:w-1/2">
+    <div className="items-center gap-6 md:flex">
+      <div className="flex items-center justify-between gap-8 p-4 bg-white md:w-1/2">
         <button
           className="text-borderGray"
           onClick={decrement}
@@ -33,11 +33,11 @@ const QuantityBtn: FC<Props> = ({ sku }) => {
           <AiOutlinePlus />
         </button>
       </div>
-      {sku <= 9 && (
-        <p className="text-orange-700 text-300 font-semibold text-center py-2">
+      {/* {sku <= 9 && (
+        <p className="py-2 font-semibold text-center text-orange-700 text-300">
           Almost sold out
         </p>
-      )}
+      )} */}
     </div>
   );
 };
