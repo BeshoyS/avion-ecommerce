@@ -22,6 +22,13 @@ export interface Product {
   url: string;
 }
 
+//Cart Slice
+export interface CartSlice {
+  products: Product[];
+  quantity: number;
+  total: number;
+}
+
 //UI Components Data
 export interface featuresDataTypes {
   icon: JSX.Element;

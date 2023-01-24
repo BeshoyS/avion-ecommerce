@@ -8,6 +8,7 @@ import { GrMenu } from "react-icons/gr";
 import NavMobile from "../components/Nav/NavMobile";
 import NavDesktop from "../components/Nav/NavDesktop";
 import useIsMobile from "../hooks/useIsMobile";
+import NavCart from "../components/NavCart";
 
 const Navbar: FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -33,10 +34,7 @@ const Navbar: FC = () => {
 
         <div className="flex items-center gap-3 text-500 md:ml-auto">
           <TbSearch className="cursor-pointer hover:text-primary transition-colors duration-300" />
-          <IoCartOutline
-            className="cursor-pointer hover:text-primary transition-colors duration-300"
-            onClick={() => handleNavigate("cart")}
-          />
+          <NavCart handleNavigate={handleNavigate} />
           <HiOutlineUserCircle className="cursor-pointer hover:text-primary transition-colors duration-300" />
           {isMobile ? (
             isOpen ? (
