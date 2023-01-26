@@ -1,35 +1,33 @@
 import { FC } from "react";
 import { useNavigate } from "react-router-dom";
-import { listingDataTypes } from "../types";
-import Button from "./Button";
-import { IoCartOutline } from "react-icons/io5";
+import { Product } from "../types";
+import AddToCart from "./AddToCart";
 
-type Props = listingDataTypes;
+type Props = {
+  product: Product;
+};
 
-const ProductCard: FC<Props> = ({ id, img, title, price }) => {
+const ProductCard: FC<Props> = ({ product }) => {
   const navigate = useNavigate();
+  const { name, url, price } = product;
 
-  function handleClick() {
-    navigate(`/product/${id}`);
+  function handleNavigate() {
+    navigate(`/product/${product.id}`);
   }
 
   return (
-    <section onClick={handleClick}>
+    <section onClick={handleNavigate}>
       <div className="h-3/4 cursor-pointer">
         <div className="relative overflow-y-hidden group">
           <img
             className="aspect-[1/1.3] object-cover shadow"
-            src={img}
-            alt={title}
+            src={url}
+            alt={name}
           />
-          <Button
-            startIcon={<IoCartOutline className="text-600" />}
-            name="Add To Cart"
-            style="absolute bottom-0 left-0 w-full bg-primary/[0.9] text-lightGray font-clashDisplay translate-y-full group-hover:translate-y-0"
-          />
+          <AddToCart product={product} />
         </div>
         <article className="mt-6">
-          <h4 className="font-clashDisplay text-600">{title}</h4>
+          <h4 className="font-clashDisplay text-600">{name}</h4>
           <p className="text-500">${price}</p>
         </article>
       </div>

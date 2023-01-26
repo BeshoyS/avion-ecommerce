@@ -76,7 +76,7 @@ export interface InfoBlockTypes {
 export interface ButtonTypes {
   name: string;
   style?: string;
-  onClick?: () => void;
+  onClick?: (e?: any) => void;
   btnType?: "submit" | "reset";
   startIcon?: JSX.Element;
   endIcon?: JSX.Element;
