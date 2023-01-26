@@ -1,7 +1,7 @@
 import { skipToken } from "@reduxjs/toolkit/dist/query";
 import { FC } from "react";
 import { useParams } from "react-router-dom";
-import Button from "../components/Button";
+import AddToCart from "../components/AddToCart";
 import Loading from "../components/Loading";
 import QuantityBtn from "../components/QuantityBtn";
 import { infoBlockData } from "../data/infoBlockData";
@@ -9,6 +9,7 @@ import { useGetsingleProductQuery } from "../redux/ApiSlice";
 import Features from "../sections/Features";
 import InfoBlock from "../sections/InfoBlock";
 import Listings from "../sections/Listings";
+import { CartProduct } from "../types";
 
 type Props = {};
 
@@ -33,9 +34,9 @@ const SingleProduct: FC = (props: Props) => {
           </article>
           <div>
             <QuantityBtn sku={data?.sku!} />
-            <Button
-              name="Add To Cart"
-              style="bg-darkPrimary text-white w-full mt-4"
+            <AddToCart
+              product={{ ...data, quantity: 1 } as CartProduct}
+              btnStyle="bg-darkPrimary text-white w-full mt-4"
             />
           </div>
         </div>

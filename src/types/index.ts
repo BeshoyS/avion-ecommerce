@@ -23,8 +23,15 @@ export interface Product {
 }
 
 //Cart Slice
+export interface CartProduct extends Product {
+  quantity: number;
+}
+export interface CartProductPayLoad extends CartProduct {
+  total: number;
+}
+
 export interface CartSlice {
-  products: Product[];
+  products: CartProductPayLoad[];
   quantity: number;
   total: number;
 }

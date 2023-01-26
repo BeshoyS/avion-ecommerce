@@ -24,7 +24,10 @@ const ProductCard: FC<Props> = ({ product }) => {
             src={url}
             alt={name}
           />
-          <AddToCart product={product} />
+          <AddToCart
+            product={{ ...product, quantity: 1 }}
+            btnStyle="absolute -bottom-1 left-0 w-full bg-primary/[0.9] text-lightGray font-clashDisplay translate-y-full group-hover:translate-y-0"
+          />
         </div>
         <article className="mt-6">
           <h4 className="font-clashDisplay text-600">{name}</h4>

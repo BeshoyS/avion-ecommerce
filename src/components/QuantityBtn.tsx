@@ -3,11 +3,11 @@ import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 
 type Props = {
   sku: number;
+  quantity?: number;
 };
 
-const QuantityBtn: FC<Props> = ({ sku }) => {
-  const [amount, setAmount] = useState<number>(1);
-
+const QuantityBtn: FC<Props> = ({ sku, quantity }) => {
+  const [amount, setAmount] = useState<number>(quantity ? quantity : 1);
   function increment() {
     setAmount((prev) => (prev < sku ? prev + 1 : prev));
   }
