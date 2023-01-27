@@ -53,13 +53,6 @@ export interface footerLinkDataTypes {
   links: footerLink[];
 }
 
-export interface listingDataTypes {
-  id: string;
-  img: string;
-  title: string;
-  price: number;
-}
-
 export interface socialLinksTypes {
   name: string;
   icon: JSX.Element;
