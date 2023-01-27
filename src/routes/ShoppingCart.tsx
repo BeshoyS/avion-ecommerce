@@ -35,7 +35,7 @@ const ShoppingCart = () => {
                     <h2 className="mb-3">{name}</h2>
                     <p>${price}</p>
                   </div>
-                  <QuantityBtn sku={sku} quantity={quantity} />
+                  <QuantityBtn sku={sku} quantity={quantity} productId={id} />
                   <p className="hidden md:block">${total}</p>
                   <RiDeleteBin5Line
                     onClick={() => handleDelete(id)}

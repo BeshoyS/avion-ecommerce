@@ -1,5 +1,5 @@
 import { skipToken } from "@reduxjs/toolkit/dist/query";
-import { FC } from "react";
+import { FC, useState } from "react";
 import { useParams } from "react-router-dom";
 import AddToCart from "../components/AddToCart";
 import Loading from "../components/Loading";
@@ -14,6 +14,7 @@ import { CartProduct } from "../types";
 type Props = {};
 
 const SingleProduct: FC = (props: Props) => {
+  const [amount, setAmount] = useState<number>(1);
   const { id } = useParams();
   const { data, isLoading } = useGetsingleProductQuery(id ? id : skipToken);
 
@@ -33,9 +34,13 @@ const SingleProduct: FC = (props: Props) => {
             <hr className="border-borderGray border-t mt-4  " />
           </article>
           <div>
-            <QuantityBtn sku={data?.sku!} />
+            <QuantityBtn
+              sku={data?.sku!}
+              quantity={amount}
+              setQuantity={setAmount}
+            />
             <AddToCart
-              product={{ ...data, quantity: 1 } as CartProduct}
+              product={{ ...data, quantity: amount } as CartProduct}
               btnStyle="bg-darkPrimary text-white w-full mt-4"
             />
           </div>
