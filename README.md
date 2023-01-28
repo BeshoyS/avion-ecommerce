@@ -1,19 +1,41 @@
-# Avion | Furniture E-commerce Store
+# Avion | Furniture E-commerce Store V1.0
 
 An E commerce platform made using React JS, Taiwind CSS, Redux, Firebase (authentication), and Firestore.
 
-Note: Under Progress
+
+
+## Screenshots
+
+![App Screenshot](https://github.com/BeshoyS/avion-ecommerce/blob/master/screenshots/main%20screenshot.png?raw=true)
 
 ## Demo
 
-Coming Soon
+Live Site [https://avion-ecommerce.netlify.app]
 
 
 ## Tech Stack
 
-**Client:** React, Redux Toolkit, TailwindCSS
+**Tools and technologies** 
 
-**Server:** Firebase
+React | TypeScript | Vite | React Router Dom | React Icons | Redux Toolkit | RTK Query | Redux Persist | TailwindCSS | Firebase | Netlify
+
+
+
+## Next Additions V2.0
+
+- Add Filter Functionality to shop page and other categories'.
+- Integrate Stripe gateway payment.
+- Add firebase login (email & password - google).
+- Add other legal pages (T&C - carrers - privacy).
+
+
+## Future Plans
+
+- Add unit test
+- build admin dashboard to handle the website
+## Feedback
+
+If you have any feedback, please reach out to us at beshoys.said@gmail.com
 
 
 ## 🔗 Links
@@ -22,4 +44,3 @@ Coming Soon
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/beshoy-s-said/)
 
 [![Resume](https://img.shields.io/badge/resume-1DA1F2?style=for-the-badge&logo=resume&logoColor=white)](https://drive.google.com/file/d/16fYkKwcYSR3lLAnHxPt92AOMgL7w-NqR/view)
-
