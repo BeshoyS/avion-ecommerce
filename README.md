@@ -21,7 +21,7 @@ React | TypeScript | Vite | React Router Dom | React Icons | Redux Toolkit | RTK
 
 
 
-## Next Additions V2.0
+## V2.0 Tasks
 
 - Add Filter Functionality to shop page and other categories'.
 - Integrate Stripe gateway payment.
