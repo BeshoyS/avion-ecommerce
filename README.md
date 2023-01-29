@@ -1,6 +1,6 @@
 # Avion | Furniture E-commerce Store V1.0
 
-An E commerce platform made using React JS, Taiwind CSS, Redux, Firebase (authentication), and Firestore.
+An E-commerce platform made using React JS, Tailwind CSS, Redux, Firebase (authentication), and Firestore.
 
 
 
