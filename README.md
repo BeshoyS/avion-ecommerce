@@ -3,14 +3,14 @@
 An E-commerce platform made using React JS, Tailwind CSS, Redux, Firebase (authentication), and Firestore.
 
 
+## Demo
+
+Live Site [https://avion-ecommerce.netlify.app]
+
 
 ## Screenshots
 
 ![App Screenshot](https://github.com/BeshoyS/avion-ecommerce/blob/master/screenshots/main%20screenshot.png?raw=true)
-
-## Demo
-
-Live Site [https://avion-ecommerce.netlify.app]
 
 
 ## Tech Stack
